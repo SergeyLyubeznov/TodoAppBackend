@@ -18,6 +18,10 @@ public func configure(_ app: Application) throws {
     app.databases.use(.postgres(hostname: host, username: user,
                                 password: password, database: name), as: .psql)
     
+    app.migrations.add(UserMigration())
+    app.migrations.add(UserTokenMigration())
+    app.migrations.add(TaskMigration())
+    
     app.logger.logLevel = .debug
     
     // register routes
