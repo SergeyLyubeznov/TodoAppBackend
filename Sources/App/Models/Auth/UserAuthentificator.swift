@@ -23,12 +23,6 @@ struct UserAuthenticator: AsyncBearerAuthenticator {
             .first() {
             
             request.auth.login(token.user)
-            
-//            if let user = try await UserEntity.query(on: request.db)
-//                .filter(\.$id == token.user.requireID())
-//                .first() {
-//                request.auth.login(user)
-//            }
         }
    }
 }

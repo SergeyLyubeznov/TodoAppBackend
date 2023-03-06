@@ -16,6 +16,9 @@ final class TaskEntity: Model, Content {
     @ID(key: .id)
     var id: UUID?
 
+    @Field(key: "title")
+    var title: String
+    
     @Field(key: "description")
     var description: String
     

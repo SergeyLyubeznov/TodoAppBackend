@@ -13,6 +13,7 @@ struct TaskMigration: AsyncMigration {
         try await database.schema("task")
             .field("id", .uuid, .identifier(auto: false))
             .field("description", .string, .required)
+            .field("title", .string, .required)
             .field("priority", .string, .required)
             .create()
     }
