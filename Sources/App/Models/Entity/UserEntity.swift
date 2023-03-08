@@ -20,6 +20,12 @@ final class UserEntity: Model, Content {
 
     @Field(key: "password")
     var password: String
+    
+    @Field(key: "first_name")
+    var firstName: String
+    
+    @Field(key: "last_name")
+    var lastName: String
 
     init() { }
 
